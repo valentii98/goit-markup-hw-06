@@ -420,6 +420,8 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: transparent;
+  outline: none;
+  color: var(--disable-btn-color);
 }
 .footer-form input::placeholder {
   font-weight: 400;
@@ -428,7 +430,8 @@ body {
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer-form input:active {
+.footer-form input:hover,
+.footer-form input:focus {
   border-color: var(--accent-text-color);
 }
 .button {
@@ -523,6 +526,7 @@ body {
   gap: 4px;
   margin-bottom: 8px;
 }
+
 .modal-label{
   font-weight: 400;
 font-size: 12px;
@@ -530,12 +534,44 @@ line-height: 1.33;
 letter-spacing: 0.04em;
 color: #8E8F99;
 }
-.modal-form{
-
+.modal-form input{
+  padding: 11px 38px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+  outline: none;
 }
 
+.modal-form input:hover,
+.modal-form input:focus,
+.modal-textarea:hover,
+.modal-textarea:focus {
+  border-color: var(--accent-text-color);
+}
+.modal-textarea{
+  padding-left: 16px;
+  padding-top: 8px;
+  width: 360px;
+  height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+  outline: none;
+}
+.modal-textarea::placeholder{
+  font-weight: 400;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.04em;
+color: rgba(117, 117, 117, 0.5);
+}
+.modal-checkbox{
+  margin-top: 16px;
+}
 .send-button {
+
   padding: 16px 32px;
+  margin-top: 24px;
+  margin-left: 95px;
   width: 169px;
   height: 56px;
   background: var(--accent-text-color);
