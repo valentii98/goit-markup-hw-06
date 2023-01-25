@@ -520,55 +520,88 @@ body {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
-.modal-input{
+.modal-input {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-bottom: 8px;
 }
-
-.modal-label{
-  font-weight: 400;
-font-size: 12px;
-line-height: 1.33;
-letter-spacing: 0.04em;
-color: #8E8F99;
+.input-wrap {
+  position: relative;
 }
-.modal-form input{
+input:focus + .input-icon,
+input:hover + .input-icon {
+  fill: var(--accent-text-color);
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.form-input {
+  width: 100%;
   padding: 11px 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
+  border-radius: 4px;
   outline: none;
 }
-
 .modal-form input:hover,
 .modal-form input:focus,
 .modal-textarea:hover,
 .modal-textarea:focus {
   border-color: var(--accent-text-color);
 }
-.modal-textarea{
-  padding-left: 16px;
-  padding-top: 8px;
-  width: 360px;
+.modal-textarea {
+  padding: 8px 16px;
+  width: 100%;
   height: 120px;
-    resize: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
   outline: none;
 }
-.modal-textarea::placeholder{
+.modal-textarea::placeholder {
   font-weight: 400;
-font-size: 12px;
-line-height: 1.33;
-letter-spacing: 0.04em;
-color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
 }
-.modal-checkbox{
+.privacy {
   margin-top: 16px;
 }
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+.checkbox-icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--accent-color);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: none;
+}
+.modal-checkbox:checked ~ .checkbox-icon{
+  background-color: var(--accent-text-color);
+  border: none;
+  fill: var(--secondary-background-color);
+}
+.privasy-link{
+  color: var(--accent-text-color);
+}
 .send-button {
-
   padding: 16px 32px;
   margin-top: 24px;
   margin-left: 95px;
