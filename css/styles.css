@@ -560,6 +560,7 @@ input:hover + .input-icon {
   border-color: var(--accent-text-color);
 }
 .modal-textarea {
+  margin-top: 4px ;
   padding: 8px 16px;
   width: 100%;
   height: 120px;
@@ -577,6 +578,7 @@ input:hover + .input-icon {
 }
 .privacy {
   margin-top: 16px;
+  margin-bottom: 24px ;
 }
 .checkbox-label {
   display: flex;
@@ -593,7 +595,7 @@ input:hover + .input-icon {
   justify-content: center;
   fill: none;
 }
-.modal-checkbox:checked ~ .checkbox-icon{
+.modal-checkbox:checked + .checkbox-label > .checkbox-icon{
   background-color: var(--accent-text-color);
   border: none;
   fill: var(--secondary-background-color);
@@ -603,8 +605,6 @@ input:hover + .input-icon {
 }
 .send-button {
   padding: 16px 32px;
-  margin-top: 24px;
-  margin-left: 95px;
   width: 169px;
   height: 56px;
   background: var(--accent-text-color);
@@ -621,6 +621,9 @@ input:hover + .input-icon {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  margin: 0 auto;
+
 }
 .send-button:hover,
 .send-button:focus {
@@ -687,7 +690,8 @@ input:hover + .input-icon {
   margin-right: 24px;
   margin-bottom: 48px;
 }
-.project-link:hover .discription-text {
+.project-link:hover .discription-text,
+.project-link:focus .discription-text {
   transform: translateY(0);
 }
 .project-card:nth-child(3n) {
